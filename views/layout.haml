@@ -2,10 +2,12 @@
 %head
   %title Rabble Rouser
   %link{rel: :stylesheet, href: '/css/reset.css', type: 'text/css'}
-  %link{rel: :stylesheet, href: '/css/base.css', type: 'text/css'}
+  %link{rel: :stylesheet, href: '/css/base.css',  type: 'text/css'}
 %body
   = yield
-  %footer
-    Content generated from
+  %footer.overbar
+    Content based on
     %a{href: 'http://rabblerabblerabbleetc.blogspot.com'}
       Rabble Rabble Rabble, etc.
+  %script{src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', type: 'text/javascript'}
+  %script{src: '/js/rabble.js', type: 'text/javascript'}

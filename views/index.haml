@@ -1,3 +1,20 @@
-- @count.times do
-  %p= @markov.generate_n_sentences(rand(5) + 1)
-%p.signature Rabble -B
+#settings.settings.overbar
+  %a#go.go{href: '#'} Rabble
+  %div
+    %p
+      %label{for: 'paragraphs'} How much rabble do you want?
+      %input#paragraphs{type: 'text', value: @count}
+      paragraphs
+    %p
+      %label{for: 'order'} How much should it sound just like Rabble?
+      %select#order{type: 'select'}
+        - %w[Barely Some Mostly Lots Identical].each_with_index do |similarity, i|
+          - value = i + 1
+          - if @order == value
+            %option{value: value, selected: 'selected'}= similarity
+          - else
+            %option{value: value}= similarity
+#rabble.rabble
+  - @count.times do
+    %p= @markov.generate_n_sentences(rand(5) + 1)
+  %p.signature Rabble -B

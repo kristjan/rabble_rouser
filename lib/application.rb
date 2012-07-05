@@ -20,13 +20,12 @@ class RabbleRouser < Sinatra::Base
 
   get '/?:count?' do
     @count = (params[:count] || rand(5) + 1).to_i
-    @markov = pick_markov(params[:order])
+    @order = (params[:order] || DEFAULT_MARKOV_ORDER).to_i
+    @markov = pick_markov(@order)
     haml :index
   end
 
   def pick_markov(order)
-    order ||= DEFAULT_MARKOV_ORDER
-    order = order.to_i
     order = 1 if order < 1
     order = 5 if order > 5
     settings.markov[order] ||= build_markov(order)

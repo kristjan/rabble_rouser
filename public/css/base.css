@@ -1,14 +1,63 @@
 html, body {
-  padding: 20px;
-  background-color: #000;
+  background: #000 url('/images/dark_wall.png') repeat;
   color: #FFF;
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: 300;
   line-height: 1.2em;
 }
+div { padding: 0 50px; }
+p { margin-bottom: 20px; }
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+a:hover { color: #EEE; }
 
-p {
-  margin: 20px 0;
+.overbar {
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  color: #CCC;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.settings {
+  top: 0;
+  padding: 20px 50px 10px;
+}
+
+.settings div {
+  float: right;
+  margin-right: 50px;
+  padding: 0;
+}
+
+.go {
+  display: block;
+  float: right;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #333;
+}
+.go:hover {
+  background-color: #444;
+}
+
+label {
+  display: inline-block;
+  width: 325px;
+}
+
+input[type=text] {
+  width: 30px;
+  font-size: 14px;
+  text-align: right;
+}
+
+.rabble {
+  margin: 150px 0 50px;
+  padding: 0 20%;
 }
 
 .signature {
@@ -16,19 +65,8 @@ p {
 }
 
 footer {
-  box-sizing: border-box;
-  width: 100%;
   padding: 10px 70px 0;
-  position: fixed;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .8);
-  color: #CCC;
   font-size: 12px;
   text-align: right;
 }
-
-a {
-  color: #FFF;
-  text-decoration: none;
-}
-a:hover   { color: #EEE; }
