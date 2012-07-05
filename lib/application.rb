@@ -29,12 +29,10 @@ class RabbleRouser < Sinatra::Base
     order = order.to_i
     order = 1 if order < 1
     order = 5 if order > 5
-    puts "Picking #{order}"
     settings.markov[order] ||= build_markov(order)
   end
 
   def build_markov(order)
-    puts "Building #{order}"
     Util.build_dictionary("markov.#{order}", order)
   end
 end
