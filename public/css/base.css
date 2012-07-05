@@ -14,3 +14,21 @@ p {
 .signature {
   text-align: right;
 }
+
+footer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 70px 0;
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .8);
+  color: #CCC;
+  font-size: 12px;
+  text-align: right;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+a:hover   { color: #EEE; }
