@@ -1,7 +1,16 @@
 html, body {
   padding: 20px;
   background-color: #000;
+  color: #FFF;
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: 300;
-  color: #FFF;
+  line-height: 1.2em;
+}
+
+p {
+  margin: 20px 0;
+}
+
+.signature {
+  text-align: right;
 }
